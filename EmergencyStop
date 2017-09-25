@@ -1,0 +1,18 @@
+task EmergencyBrake()
+{
+	int i;
+	while (true)
+	{
+		if (vexRT[Btn8R] !=0)
+		{
+			for (i=0; i<3; i++)
+			{
+				motor[rightMotor] = 0;
+				motor[leftMotor]  = 0;
+			}
+			StopAllTasks();
+		}
+		wait1Msec(20);
+	}
+	return;
+}
